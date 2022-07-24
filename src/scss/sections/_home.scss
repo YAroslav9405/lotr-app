@@ -1,0 +1,57 @@
+.hero-section {
+    background-image: url(../../img/home.jpeg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    .head-holder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .title-img {
+        width: 100%;
+        max-width: 700px;
+    }
+    .link-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100vh;
+
+    }
+
+    .link {
+        position: relative;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        color: $black;
+        margin-bottom: 50px;
+        
+        @include media ('>425px') {
+            font-size: 14px;
+        }
+
+        @include media ('>tablet') {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 3px;
+        }
+
+        span::after {
+            content: '\005E';
+            position: absolute;
+            transform: rotate(-180deg) translateX(-50%);
+            font-size: 18px;
+            top: 15px;
+            right: 50%;
+        }
+    }
+}
