@@ -1,0 +1,117 @@
+.footer{
+    background-color: $black;
+    
+
+    .container-wraper {
+        border-bottom: 1px solid $space-gray;
+        margin-bottom: 15px;
+    }
+
+    .section-container {
+        margin-bottom: 10px;
+    }
+
+    .about-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+   .links-holder {
+       display: flex;
+       justify-content: flex-start;
+   }
+
+   .nav-list {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: flex-start;
+   }
+
+   .nav-link {
+       color: $white;
+       font-size: 16px;
+
+       @include media ('>=tablet') {
+           margin: 0 5px;
+       }
+
+       @include media ('>=1024px') {
+        margin: 0;
+       }
+
+   }
+
+   .nav {
+        @include media ('>=tablet') {
+            padding: 0;
+        }
+   }
+
+   .nav-item {
+        @include media ('>=tablet') {
+            margin-bottom: 0px;
+        }
+    }
+
+   .nav-link:hover {
+       color: $space-gray;
+   }
+
+   .text-footer-holder {
+       display: flex;
+       flex-wrap: wrap;
+       padding-left: 8px;
+       align-items: center;
+       
+   }
+
+   .text-footer {
+       color: $space-gray;
+       font-size: 13px;
+       &.social{
+        font-size: 14px;
+        text-align: right;
+        }
+   }
+
+   .social-net:hover {
+        color: $space-gray;
+        transform: scale(1.5);
+   }
+
+   .social-img {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: flex-end;
+   }
+
+   .author-holder {
+       padding: 0 15px 20px;
+   }
+
+   .author {
+       @extend .text-footer;
+       font-size: 16px;
+       text-align: center;
+   }
+
+   .nav-holder {
+       @include media ('>=tablet') {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+            padding: 0;
+            height: auto;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(0);
+       }
+   }
+}

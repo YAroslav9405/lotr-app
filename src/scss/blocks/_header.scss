@@ -3,12 +3,10 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: 0;
+    padding-top: 5px;
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.49) 51%,rgba(255,255,255,0) );
     
-    @include media ('>=1024px') {
-        padding-top: 0px;
-    }
+    
 
     &.active {
         .nav-holder {
@@ -54,7 +52,7 @@
     visibility: hidden;
     position: absolute;
     padding: 20px;
-    top: 0;
+    top: -10%;
     left: 0;
     right: 0;
     height: 100vh;
@@ -117,15 +115,20 @@
 
     .nav-link {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 28px;
-        color: #fff;
+        color: $white;
         display: block;
         text-decoration: none;
 
         @include media ('>=1024px') {
+            font-size: 18px;
             color: $black;
         }
+    }
+
+    .nav-link:hover {
+        color: $white;
     }
 }
 
@@ -168,4 +171,6 @@
         width: 50%;
     }
 }
+
+
 

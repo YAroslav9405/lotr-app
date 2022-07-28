@@ -8,6 +8,7 @@ h1,
 h2,
 h3,
 hr,
+ul,
 input,
 p {
     margin: 0;
@@ -15,7 +16,7 @@ p {
 
 body {
     font-family: $font-poppins;
-    color: $white;
+    
 }
 
 .container {
@@ -35,3 +36,59 @@ body {
     margin: 0;
 }
 
+.section-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title-holder-main {
+    padding: 50px 10px 0;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto 45px;
+
+    @include media ('>=tablet') {
+        padding: 90px 10px 0;
+    }
+}
+
+.main-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include media ('>=tablet') {
+        font-size: 22px;
+    }
+}
+
+.watch-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 12px;
+    color: $space-gray;
+    background-color: $white;
+    border: none;
+    &:hover {
+        color: $gold;
+    }
+    
+    @include media ('>=tablet') {
+        font-size: 14px;
+    }
+
+    @include media ('>1024px') {
+        font-size: 16px;
+    }
+    
+}
+
+.arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left: 2px;
+    transform: translate(100%, 6%);
+}

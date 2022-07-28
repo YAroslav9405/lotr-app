@@ -7,6 +7,9 @@ import Movies from './pages/movies/Movies';
 import Characters from './pages/characters/Characters';
 import News from './pages/news/News';
 import Map from './pages/map/Map';
+import Fellowship from './pages/fellowship/Fellowship'
+import TwoTowers from './pages/two-towers/TwoTowers';
+import ReturnKing from './pages/return-king/ReturnKing';
 
 
 
@@ -18,7 +21,7 @@ function App() {
     setTimeout(() => {
       spinner.style.display="none";
       setLoading(false);
-    }, 2000);
+    }, 0);
   }
   return (
       !loading && (
@@ -29,6 +32,9 @@ function App() {
             <Route path="/characters" element={<Characters/>} />
             <Route path="/news" element={<News/>} />
             <Route path="/map" element={<Map/>} />
+            <Route path="/fellowship" element={<Fellowship/>} />
+            <Route path="/two-towers" element={<TwoTowers/>} />
+            <Route path="/return-king" element={<ReturnKing/>} />
         </Routes>
       </div>
       )

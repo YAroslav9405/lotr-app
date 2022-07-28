@@ -1,0 +1,86 @@
+.blocks-holder{
+        
+    @include media ('>=tablet') {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+    
+}
+
+.title-holder {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include media ('>=tablet') {
+
+    }
+
+    @include media ('>=tablet') {
+        width: 50%;
+        padding: 0 40px 0 90px;
+        text-align: right;
+        margin-bottom: 0;
+    }
+    
+}
+
+.title-frodo {
+    font-size: 34px;
+    font-family: $old-standart;
+    font-weight: 400;
+
+    @include media ('>=tablet') {
+        font-size: 31px;
+    }
+
+    @include media ('>=1024px') {
+        font-size: 44px;
+    }
+}
+
+.frodo-holder {
+   margin-bottom: 30px;
+
+    @include media ('>=tablet') {
+        width: 50%;
+        margin-bottom: 0;
+    }
+}
+
+.img-frodo {
+    width: 100%;
+}
+
+.blocks-holder-hobbits{
+    margin-bottom: 30px;
+    @extend .blocks-holder;
+    
+    @include media ('>=tablet') {
+        flex-direction: row-reverse;
+        margin-bottom: 150px;
+    }
+}
+
+
+.title-holder-hobbits {
+    @extend .title-holder;
+    text-align: left;
+
+    @include media ('>=tablet') {
+        padding: 0 20px 0 15px;
+    }
+
+    @include media ('>=1024px') {
+        padding: 0 40px 0 90px;
+    }
+}
+
+
+.title-hobbits {
+    font-size: 12px;
+
+    @include media ('>=tablet') {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,352 @@
+.fellowship {
+    position: relative;
+    @extend .hero-section;
+    background-image: url(../../img/fellowship/frodo-sam.jpeg);
+
+    .head-holder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title {
+        font-family: $old-standart;
+        font-size: 32px;
+        color: $white;
+
+        @include media ('>tablet') {
+            font-size: 43px;
+        }
+
+        @include media ('>1024px') {
+            font-size: 58px;
+        }
+    }
+
+   
+}
+
+.about-fellowship {
+
+    margin-bottom: 50px;
+
+    .block-holder {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .block-cast {
+
+        @include media ('>=tablet') {
+            width: calc(100% / 3);
+        }
+        
+    }
+
+    .block-info {
+
+        @include media ('>=tablet') {
+            width: calc((100% / 3) + (100% / 3 ));
+        }
+    }
+
+    .text-block {
+        width: 50%;
+        padding-left: 20px;
+        
+    }
+
+    .block-actors {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .title-holder-main {
+        padding: 0;
+        margin: 0 0 25px;
+
+        @include media ('>=tablet') {
+            margin: 0 0 45px;
+        }
+        
+        
+    }
+
+    .main-title {
+        text-align: left;
+    }
+
+    .img-holder {
+        width: (100% / 3);
+        &.trailer {
+            width: 100%;
+        }
+    }
+
+    .img-actor {
+        max-width: 100%;
+
+    }
+
+    .text-holder {
+        padding: 0 2px;
+        margin-bottom: 5px;
+    }
+
+    .text {
+        &.name {
+            font-family: $old-standart;
+            font-size: 20px;
+        }
+        &.character {
+            font-size: 14px;
+        }
+    }
+
+    .wraper-trailer-raiting {
+
+        @include media ('>=tablet') {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+       
+    }
+
+    .trailer-block {
+        
+        margin-bottom: 20px;
+
+        @include media ('>=tablet') {
+            width: 50%;
+            margin-bottom: 0;
+            padding: 0 10px;
+        }
+
+        .img-holder {
+            position: relative;
+        }
+
+        .watch-link {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            background: none;
+            font-size: 20px;
+
+
+            @include media ('>=1024px'){
+                font-size: 26px;
+            }
+            
+        }
+
+
+        .watch-link-holder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+
+        }
+    }
+    
+    .raiting-block {
+        margin-bottom: 20px;
+
+        @include media ('>=tablet') {
+            width: 50%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .play {
+        padding-left: 5px;
+        width: 100%;
+        max-width: 30px;
+    }
+
+    .raiting-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .raiting-text-holder {
+        display: flex;
+        align-items: center;
+        padding: 8px 0 0 4px;
+    }
+
+    .raiting-text1 {
+        font-size: 30px;
+    }
+
+    .raiting-text2 {
+        font-size: 16px;
+        color: $space-gray;
+    }
+
+    .img-star {
+        width: (100% / 15);
+    }
+
+    .line-story {
+        margin-bottom: 50px;
+
+        .title-holder-main {
+            max-width: none;
+        }
+
+        .text {
+            font-size: 12px;
+
+            @include media ('>=tablet') {
+                font-size: 14px;
+            }
+
+            @include media ('>=1024px') {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .about-fellowship-movie {
+        margin-bottom: 50px;
+
+        .title-holder-main {
+            max-width: none;
+        }
+    }
+
+    .movie-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+    }
+
+    .about-movie-list {
+        padding: 0;
+    }
+
+    .awards {
+
+        @include media ('>=tablet') {
+            font-size: 24px;
+            padding-left: 10px;
+        }
+
+        @include media ('>=1024px') {
+            font-size: 36px;
+        }
+        
+    }
+
+    .info-about {
+        width: 50%;
+        font-size: 12px;
+
+        @include media ('>=tablet') {
+            font-size: 16px;
+        }
+
+        @include media ('>=1024px') {
+            font-size: 20px;
+        }
+
+    }
+
+    .awards {
+        width: 50%;
+    }
+
+    .other-movies {
+        .watch-link {
+
+            @include media ('>=tablet') {
+                font-size: 16px;
+            }
+
+            @include media ('>=1024px') {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .other-wraper {
+
+        @include media ('>=tablet') {
+            display: flex;
+            flex-wrap: wrap;
+        } 
+    }
+
+    .second-movie,
+    .first-movie {
+
+        @include media ('>=tablet') {
+            width: 50%;
+        }
+       
+    }
+
+    .first-movie {
+        margin-bottom: 30px;
+
+        @include media ('>=tablet') {
+            margin-bottom: 0;
+        }
+       
+    }
+
+    .img-other {
+        max-width: 290px;
+
+        @include media ('>=tablet') {
+            max-width: 200px;
+        }
+
+        @include media ('>=1024px') {
+            max-width: 290px;
+        }
+        
+    }
+
+    
+}
+
+.gallery {
+    width: 100%;
+    height: 200px;
+    padding: 0 15px;
+    border-radius: 40px;
+}
+
+
+.slick-arrow.slick-next {
+    display: none !important; 
+
+    @include media ('>tablet') {
+        display: block !important;
+    }
+}
+
+.slick-prev:before, 
+.slick-next:before{
+    display: none;
+    color: $black !important; 
+
+    @include media ('>tablet') {
+        display: block;
+    }
+}

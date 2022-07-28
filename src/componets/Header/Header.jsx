@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import lotrLogo from '../../img/lotr-logo.svg'
+import lotrLogo from '../../img/header/lotr-logo.svg'
 import {useState} from 'react';
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
         <div className="container">
             <div className="logo-holder">
                 <Link to="/" className="logo"> 
-                    <img src={lotrLogo} className="img-logo"  alt="lotr" width="64"/>
+                    <img src={lotrLogo} className="img-logo"  alt="lotr" width="70"/>
                 </Link>
             </div>
             <div className="nav-holder js-nav">
