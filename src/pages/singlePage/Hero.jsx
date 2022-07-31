@@ -8,6 +8,10 @@ const Hero = () => {
     const { id } = useParams();
     const [character, setCharacter] = useState();
     const [quote, setQuote] = useState();
+    const [query, setQuery] = useState("");
+
+
+    
     const request = async ()=> {
         const response = await fetch (`https://the-one-api.dev/v2/character/${id}`,  {headers:{Authorization: "Bearer IJK1dkd6deE7Z0m2uUB4"}} );
         const data = await response.json();
@@ -100,7 +104,16 @@ const Hero = () => {
                                     <div className="title-holder-main">
                                         <p className="main-title">quotes</p>
                                     </div>
-                                    {quote.map(quote => (
+                                    <div className="input-holder">
+                                        <label className="label" htmlFor="input">search by word or phrase: </label>
+                                        <input 
+                                            type="text"
+                                            id="input"
+                                            className="search" 
+                                            onChange={(e) => setQuery(e.target.value)}
+                                        />
+                                    </div>
+                                    {quote.filter(quote=>quote.dialog.includes(query)).map(quote => (
                                         <div className="first-dialog" key={quote.id}>
                                             <div>{(() => {
                                                 switch(true) {
