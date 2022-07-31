@@ -1,0 +1,199 @@
+.characters {
+    @extend .hero-section;
+    background-image: url(../../img/characters/movie-bg.jpg);
+}
+.about-characters {
+    margin-bottom: 90px;
+
+    .hero-holder {
+        position: relative;
+    }
+
+    .light-characters {
+        
+        @include media ('>=tablet') {
+            display: grid;
+            gap: 30px 20px;
+            grid-template-areas: 
+            "frodo frodo"
+            "sam merry"
+            "legolas gimli"
+            "gandalf pippin"
+            "aragorn arwen"
+        ;
+        }
+
+        @include media ('>=1024px') {
+                display: grid;
+                gap: 30px 20px;
+                grid-template-areas: 
+                "frodo sam merry"
+                "pippin legolas gimli "
+                "gandalf aragorn arwen"
+            ;
+        }
+    }
+    
+    .col {
+        padding: 10px;
+    }
+
+    .col-1 {
+        grid-area: frodo;
+    }
+
+    .col-2 {
+        grid-area: sam;
+    }
+
+    .col-3 {
+        grid-area: merry;
+    }
+
+    .col-4 {
+        grid-area: pippin;
+    }
+
+    .col-5 {
+        grid-area: gandalf;
+    }
+
+    .col-6 {
+        grid-area: aragorn;
+    }
+
+    .col-7 {
+        grid-area: legolas;
+    }
+
+    .col-8 {
+        grid-area: gimli;
+    }
+
+    .col-9 {
+        grid-area: arwen;
+    }
+
+    .img-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: 100%;
+        @include media ('>=tablet') {
+            display: block;
+            &.frodo {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @include media ('>=1024px') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .img-actor {
+        width: 100%;
+        max-width: 318px;
+        height: 420px;
+        
+
+    }
+
+    .text-holder {
+        padding-top: 5px;
+
+        @include media ('>=tablet') {
+            &.frodo{
+                text-align: center;
+            }
+        }
+
+        @include media ('>=1024px') {
+            &.frodo {
+                text-align: left;
+            }
+        }
+    }
+
+    .text-name {
+        font-size: 20px;
+        font-family: $old-standart;
+    }
+
+    .watch-link-holder {
+        padding-top: 5px;
+
+
+        @include media ('>=tablet') {
+            &.frodo {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @include media ('>=1024px') {
+            &.frodo {
+                display: block;
+            }
+        }
+    }
+
+    .dark-characters {
+        position: absolute;
+        visibility: visible;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        @include media ('>=tablet') {
+            display: grid;
+            gap: 30px 20px;
+            grid-template-areas: 
+            "frodo frodo"
+            "sam merry"
+            "legolas gimli"
+            "gandalf pippin"
+            "aragorn arwen"
+        ;
+        }
+
+        @include media ('>=1024px') {
+                display: grid;
+                gap: 30px 20px;
+                grid-template-areas: 
+                "frodo sam merry"
+                "pippin legolas gimli "
+                "gandalf aragorn arwen"
+            ;
+        }
+    }
+
+    .switch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .switch-label {
+        padding-right: 5px;
+    }
+
+    #light .dark-characters {
+        visibility: hidden;
+    }
+
+    #dark .light-characters {
+        visibility: hidden;
+    }
+
+    
+    
+}
