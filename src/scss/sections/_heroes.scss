@@ -1,0 +1,90 @@
+.heroes {
+    padding-top: 90px;
+    margin-bottom: 30px;
+
+    @include media ('>=tablet') {
+        padding-top: 130px;
+        margin-bottom: 50px;
+    }
+
+    .hero-holder {
+
+        @include media ('>=tablet') {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    .about-hero {
+        width: 100%;
+
+        @include media ('>=tablet') {
+            width: calc(100% / 3);
+        }
+    }
+
+    .quote-holder {
+        width: 100%;
+
+        @include media ('>=tablet') {
+            width: calc((100% / 3) + (100% / 3 ));
+            padding-left: 30px;
+        }
+    }
+
+    .text-holder{
+        margin-bottom: 20px;
+    }
+
+    .main-text {
+        font-weight: 600;
+        font-size: 16px;
+        padding-right: 5px;
+
+        @include media ('>=tablet') {
+            font-size: 20px;
+        }
+    }
+
+    .text {
+        font-size: 16px;
+
+        @include media ('>=tablet') {
+            font-size: 20px;
+        }
+    }
+
+    .watch-link {
+        font-size: 16px;
+        color: $gold;
+
+        @include media ('>=tablet') {
+            font-size: 20px;
+        }
+    }
+
+    .watch-link:hover {
+        color: $space-gray;
+    }
+
+    .first-dialog {
+        margin-bottom: 20px;
+    }
+
+    .movie-holder {
+        margin-bottom: 5px;
+    }
+
+    .quote-span {
+        padding-right: 5px;
+        font-weight: 600;
+    }
+
+    .movie-text {
+        font-size: 12px;
+
+        @include media ('>=tablet') {
+            font-size: 16px;
+        }
+    }
+}

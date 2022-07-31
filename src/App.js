@@ -10,6 +10,7 @@ import Map from './pages/map/Map';
 import Fellowship from './pages/fellowship/Fellowship'
 import TwoTowers from './pages/two-towers/TwoTowers';
 import ReturnKing from './pages/return-king/ReturnKing';
+import Hero from './pages/singlePage/Hero';
 
 
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/fellowship" element={<Fellowship/>} />
             <Route path="/two-towers" element={<TwoTowers/>} />
             <Route path="/return-king" element={<ReturnKing/>} />
+            <Route path='/:id'  element={<Hero/>} />
         </Routes>
       </div>
       )

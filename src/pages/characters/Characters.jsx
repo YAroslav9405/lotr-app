@@ -21,6 +21,7 @@ import orck from "../../img/characters/dark/lugdush.webp";
 import { useEffect, useState } from "react";
 import { createContext } from "react";
 import ReactSwitch from "react-switch";
+import { Link } from "react-router-dom";
 
 
 export const ThemeContext = createContext(null);
@@ -32,7 +33,7 @@ const Characters = () => {
     const response = await fetch (`https://the-one-api.dev/v2/character`,  {headers:{Authorization: "Bearer IJK1dkd6deE7Z0m2uUB4"}} );
     const data = await response.json();
     setCharacter(data.docs);
-    console.log(data.docs);
+    console.log(character);
 }
 useEffect(() => {
        
@@ -78,11 +79,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[87].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder frodo">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                        {character && (
+                                            <div className="watch-link-holder frodo">
+                                                <Link to={`/${character[87]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-2">
                                         <div className="img-holder">
@@ -93,11 +96,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[333].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                            <div className="watch-link-holder">
+                                                <Link to={`/${character[333]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-3">
                                         <div className="img-holder">
@@ -108,11 +113,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[190].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                            <div className="watch-link-holder">
+                                                <Link to={`/${character[190]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-4">
                                         <div className="img-holder">
@@ -123,11 +130,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[622].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                            <div className="watch-link-holder">
+                                                <Link to={`/${character[622]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-5">
                                         <div className="img-holder">
@@ -138,11 +147,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[732].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                            <div className="watch-link-holder">
+                                                <Link to={`/${character[732]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-6">
                                         <div className="img-holder">
@@ -153,11 +164,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[40].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                            <div className="watch-link-holder">
+                                                <Link to={`/${character[40]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-7">
                                         <div className="img-holder">
@@ -168,11 +181,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[449].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                            <div className="watch-link-holder">
+                                                <Link to={`/${character[449]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-8">
                                         <div className="img-holder">
@@ -183,11 +198,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[355].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                            <div className="watch-link-holder">
+                                                <Link to={`/${character[355]._id}`} className="watch-link">
+                                                    More info &#8594;
+                                                </Link>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="col col-9">
                                         <div className="img-holder">
@@ -198,11 +215,13 @@ const toggleTheme = () => {
                                                 <p className="text-name">{character[73].name}</p>
                                             </div>
                                         )}
-                                        <div className="watch-link-holder">
-                                            <a href="#"  className="watch-link">
-                                                More info &#8594;
-                                            </a>
-                                        </div>
+                                         {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[73]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                     </div>
                                 </div>
                                 <div className="dark-characters">
@@ -215,11 +234,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[737].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder frodo">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder frodo">
+                                                    <Link to={`/${character[737]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-2">
                                             <div className="img-holder">
@@ -230,11 +251,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[853].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[853]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-3">
                                             <div className="img-holder">
@@ -245,11 +268,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[868].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[868]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-4">
                                             <div className="img-holder">
@@ -260,11 +285,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[736].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[736]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-5">
                                             <div className="img-holder">
@@ -275,11 +302,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[771].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[771]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-6">
                                             <div className="img-holder">
@@ -290,11 +319,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[770].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[770]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-7">
                                             <div className="img-holder">
@@ -305,11 +336,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[753].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                            {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[753]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-8">
                                             <div className="img-holder">
@@ -320,11 +353,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[559].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[559]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="col col-9">
                                             <div className="img-holder">
@@ -335,11 +370,13 @@ const toggleTheme = () => {
                                                     <p className="text-name">{character[895].name}</p>
                                                 </div>
                                             )}
-                                            <div className="watch-link-holder">
-                                                <a href="#"  className="watch-link">
-                                                    More info &#8594;
-                                                </a>
-                                            </div>
+                                             {character && (
+                                                <div className="watch-link-holder">
+                                                    <Link to={`/${character[895]._id}`} className="watch-link">
+                                                        More info &#8594;
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                 </div>
                             </div>
