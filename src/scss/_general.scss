@@ -92,3 +92,66 @@ body {
     padding-left: 2px;
     transform: translate(100%, 6%);
 }
+
+.close {
+    position: absolute;
+    right: 7px;
+    top: 13px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+
+    @include media ('>=tablet') {
+        right: 13px;
+        top: 13px
+    }
+
+    @include media ('>=1024px') {
+        right: 16px;
+        top: 16px
+    }
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+
+    @include media ('>=tablet') {
+        height: 25px;
+    }
+
+    @include media ('>=1024px') {
+        height: 33px;
+    }
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.results-holder {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+    color: $space-gray;
+
+    @include media ('>=tablet') {
+        font-size: 25px;
+    }
+
+    @include media ('>=1024px') {
+        font-size: 30px;
+    }
+}

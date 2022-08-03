@@ -195,5 +195,112 @@
     }
 
     
+    .button-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .hero-button {
+        cursor: pointer;
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: none;
+        font-weight: 600;
+    }
+
+    #light .hero-button {
+        border: 1px solid $black;
+        background: linear-gradient(135deg, #f6f8f9 50%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%)
+    } 
+
+    #light .hero-button:hover {
+        border: 1px solid $gold;
+        background: linear-gradient(135deg, rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,
+        rgba(246,248,249,1) 51%,rgba(245,247,249,1) 100%);
+    } 
+
+    #dark .hero-button {
+        color: white;
+        background: linear-gradient(135deg, #595959 50%,#4c4c4c 50%,#2c2c2c 50%,#4c4c4c 50%,
+        #474747 50%,#474747 50%,#595959 50%,#666666 50%,#666666 50%,#000000 50%,#111111 60%,
+        #2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    } 
+
+    #dark .hero-button:hover {
+        color: white;
+        background: linear-gradient(135deg, rgba(28,28,28,1) 0%,rgba(0,0,0,1) 49%,rgba(0,0,0,1) 49%,rgba(43,43,43,1)
+         50%,rgba(17,17,17,1) 50%,rgba(76,76,76,1) 50%,rgba(76,76,76,1) 50%,rgba(17,17,17,1) 50%,rgba(44,44,44,1)
+          50%,rgba(17,17,17,1) 50%,rgba(76,76,76,1) 50%,rgba(76,76,76,1) 50%,rgba(43,43,43,1) 50%,rgba(76,76,76,1) 
+          51%,rgba(102,102,102,1) 100%,rgba(71,71,71,1) 100%,rgba(102,102,102,1) 100%,rgba(71,71,71,1) 100%,rgba(71,71,71,1)
+           100%,rgba(102,102,102,1) 100%,rgba(89,89,89,1) 100%,rgba(19,19,19,1) 100%,rgba(28,28,28,1) 100%,rgba(71,71,71,1) 100%,
+           rgba(102,102,102,1) 100%,rgba(102,102,102,1) 100%,rgba(71,71,71,1) 100%,rgba(71,71,71,1) 100%,rgba(71,71,71,1) 100%,
+           rgba(102,102,102,1) 100%,rgba(102,102,102,1) 100%);
+    } 
+
     
 }
+
+
+.ReactModal__Content.ReactModal__Content--after-open {
+
+    inset: 120px 30px !important;
+    border-radius: 30px!important;
+
+    @include media ('>=tablet') {
+        inset: 110px 129px !important;
+    }
+
+    @include media ('>=1024px') {
+        inset: 170px !important;
+    }
+    
+    @include media ('>=1440px') {
+        inset: 210px 400px  !important;
+    }
+    
+    .label {
+        font-weight: 600;
+        font-size: 16px;
+        padding-right: 5px;
+
+        @include media ('>=tablet') {
+            font-size: 20px;
+        }
+    }
+
+    .input-holder {
+        padding-top: 15px;
+
+        @include media ('>=tablet') {
+            padding-top: 20px;
+        }
+    }
+
+    .hero-search {
+        padding: 0 ;
+        
+    }
+
+    .main-text,
+    .text {
+        @extend.main-text;
+        font-size: 12px;
+
+        @include media ('>=tablet') {
+            font-size: 16px;
+        }
+    
+        @include media ('>=1024px') {
+            font-size: 20px;
+        }
+    }
+
+    .main-text.new {
+        @extend.main-text;
+        font-weight: 600;
+    }
+}
+

@@ -26,6 +26,69 @@ const Hero = () => {
         quoteRequest();
         request();
     }, [id]);
+
+    const renderDialog = () => {
+        const filterDialog = quote.filter(quote=>quote.dialog.toLowerCase().includes(query.toLowerCase()));
+        if (filterDialog.length > 0 ) {
+            return (
+                <div>
+                    {filterDialog.map(quote => (
+                        <div className="first-dialog" key={quote.id}>
+                            <div>{(() => {
+                                switch(true) {
+                                    case(quote.movie === "5cd95395de30eff6ebccde5c"): 
+                                    return <div className="movie-holder">
+                                                <p className="movie-text">
+                                                    <span className="quote-span">
+                                                        Movie: 
+                                                    </span>
+                                                    The Fellowship of the Ring
+                                                </p>
+                                            </div>;
+
+                                    case(quote.movie === "5cd95395de30eff6ebccde5b"): 
+                                    return  <div className="movie-holder">
+                                                <p className="movie-text">
+                                                    <span className="quote-span">
+                                                        Movie: 
+                                                    </span>
+                                                    Two Towers
+                                                </p>
+                                            </div>;
+
+                                    default:     
+                                    return <div className="movie-holder">
+                                                <p className="movie-text">
+                                                    <span className="quote-span">
+                                                        Movie: 
+                                                    </span>
+                                                    The Return of the King
+                                                </p>
+                                            </div>;
+                                        }
+                                    })()}
+                            </div>
+                        <div className="dialog-holder">
+                             <p className="movie-text">
+                                 <span className="quote-span">
+                                    Dialog: 
+                                 </span> 
+                                 {quote.dialog}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    ))}
+                </div>
+            )} else {
+                return (
+                    <div className="results-holder">
+                        <p>No results</p>
+                    </div>
+                )
+            }
+        } 
     return(
         <div>
             <Header/>
@@ -113,51 +176,9 @@ const Hero = () => {
                                             onChange={(e) => setQuery(e.target.value)}
                                         />
                                     </div>
-                                    {quote.filter(quote=>quote.dialog.includes(query)).map(quote => (
-                                        <div className="first-dialog" key={quote.id}>
-                                            <div>{(() => {
-                                                switch(true) {
-                                                    case(quote.movie === "5cd95395de30eff6ebccde5c"): 
-                                                    return <div className="movie-holder">
-                                                                <p className="movie-text">
-                                                                    <span className="quote-span">
-                                                                        Movie: 
-                                                                    </span>
-                                                                     The Fellowship of the Ring
-                                                                </p>
-                                                            </div>;
-
-                                                    case(quote.movie === "5cd95395de30eff6ebccde5b"): 
-                                                    return  <div className="movie-holder">
-                                                                <p className="movie-text">
-                                                                    <span className="quote-span">
-                                                                        Movie: 
-                                                                    </span>
-                                                                     Two Towers
-                                                                </p>
-                                                            </div>;
-
-                                                    default:     return <div className="movie-holder">
-                                                                            <p className="movie-text">
-                                                                                <span className="quote-span">
-                                                                                    Movie: 
-                                                                                </span>
-                                                                                 The Return of the King
-                                                                            </p>
-                                                                        </div>;
-                                                        }
-                                                    })()}
-                                            </div>
-                                            <div className="dialog-holder">
-                                                 <p className="movie-text">
-                                                     <span className="quote-span">
-                                                        Dialog: 
-                                                     </span> 
-                                                     {quote.dialog}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    ))}
+                                    <div>
+                                        {renderDialog()}
+                                    </div>
                                 </div>
                             )}
                         </div>
