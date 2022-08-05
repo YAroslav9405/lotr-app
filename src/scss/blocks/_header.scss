@@ -97,7 +97,7 @@
         @include media ('>=1024px') {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             width: 100%;
         }
@@ -110,6 +110,7 @@
         @include media ('>=1024px') {
             margin: 0;
             padding: 0 10px;
+            margin-right: 50px;
         }
     }
 

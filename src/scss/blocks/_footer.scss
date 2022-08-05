@@ -53,6 +53,7 @@
    .nav-item {
         @include media ('>=tablet') {
             margin-bottom: 0px;
+            margin-right: 10px;
         }
     }
 
