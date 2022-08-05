@@ -409,18 +409,16 @@ const renderResults = () => {
                                       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} >
                                          <span className="close" onClick={closeModal}></span>
                                          <div className="modal-context">
-                                     
-                                          <div className="input-holder">
-                                          <label className="label" htmlFor="input-modal">input character name: </label>
-                                          <input 
-                                              type="text"
-                                              id="input-modal"
-                                              className="search"
-                                              onChange={(e) => setQuery(e.target.value)} 
-                                              
-                                             />
-                                         </div>
-                                            {renderResults()}
+                                            <div className="input-holder">
+                                            <label className="label" htmlFor="input-modal">input character name: </label>
+                                            <input 
+                                                type="text"
+                                                id="input-modal"
+                                                className="search"
+                                                onChange={(e) => setQuery(e.target.value)} 
+                                                />
+                                            </div>
+                                                {renderResults()}
                                          </div>
                                      </Modal>
                              </div>

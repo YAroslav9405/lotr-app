@@ -1,0 +1,338 @@
+.map {
+    @extend .hero-section;
+    background-image: url(../../img/map/rivendell.jpeg);
+}
+
+.interactive {
+    margin-bottom: 50px;
+
+    .title-holder-main {
+        padding-top: 50px;
+        margin-bottom: 35px;
+        width: 100%;
+        max-width: none;
+    }
+
+    .map-holder {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .middle-map {
+        width: 100%;
+        max-width: 930px;
+    }
+
+    .point-holder1 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 24%;
+        left: 28%;
+        z-index: 5;
+    }
+
+    .point-holder2 {
+        @extend.point-holder1;
+        top: 23%;
+        left: 33%;
+    }
+
+    .point-holder3 {
+        @extend.point-holder1;
+        top: 22%;
+        left: 47%;
+    }
+
+    .point-holder4 {
+        @extend.point-holder1;
+        top: 48%;
+        left: 42%;
+    }
+
+    .point-holder5 {
+        @extend.point-holder1;
+        top: 58%;
+        left: 48%;
+    }
+
+    .point-holder6 {
+        @extend.point-holder1;
+        top: 62%;
+        left: 48%;
+    }
+
+    .point-holder7 {
+        @extend.point-holder1;
+        top: 65%;
+        left: 60%;
+    }
+
+    .point-holder8 {
+        @extend.point-holder1;
+        top: 57%;
+        left: 63%;
+    }
+
+    .point-holder9 {
+        @extend.point-holder1;
+        top: 61%;
+        left: 69%;
+    }
+
+    .point-holder10 {
+        @extend.point-holder1;
+        top: 12%;
+        left: 63%;
+    }
+    .point-holder11 {
+        @extend.point-holder1;
+        top: 34%;
+        left: 45%;
+    }
+
+    .point-holder12 {
+        @extend.point-holder1;
+        top: 56%;
+        left: 45%;
+    }
+
+    .point-holder13 {
+        @extend.point-holder1;
+        top: 37%;
+        left: 50%;
+    }
+
+    .point-holder14 {
+        @extend.point-holder1;
+        top: 62%;
+        left: 66%;
+    }
+
+    .modal1 {
+        position: absolute;
+        visibility: hidden;
+        width: 250px;
+        padding: 8px;
+        top: -37%;
+        left: 5%;
+        background-color: $black;
+        color: $white;
+        border-radius: 6px;
+        z-index: 10;
+
+        @include media ('>=tablet') {
+            top: -3%;
+            left: 5%;
+        }
+    }
+
+    .modal2 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 10%;
+            left: 10%;
+        }
+
+    }
+
+    .modal3 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: -5%;
+            left: 22%;
+        }
+    }
+
+    .modal4 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 8%;
+            left: 18%;
+        }
+    }
+
+    .modal5 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 31%;
+            left: 24%;
+        }
+    }
+
+    .modal6 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 41%;
+            left: 24%;
+        }
+    }
+
+    .modal7 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 30%;
+            left: 37%;
+        }
+    }
+
+    .modal8 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 32%;
+            left: 40%;
+        }
+    }
+
+    .modal9 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 20%;
+            left: 46%;
+        }
+    }
+
+    .modal10 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: -4%;
+            left: 40%;
+        }
+    }
+
+    .modal11 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 2%;
+            left: 21%; 
+        }
+    }
+
+    .modal12 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 27%;
+            left: 20%;
+        }
+    }
+
+    .modal13 {
+        @extend.modal1;
+        
+        @include media ('>=tablet') {
+            top: 2%;
+            left: 26%;
+        }
+    }
+
+    .modal14 {
+        @extend.modal1;
+
+        @include media ('>=tablet') {
+            top: 33%;
+            left: 42%;
+        }
+    }
+
+    .modal1.active {
+        visibility: visible;
+    }
+    
+    .title-holder {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 5px;
+
+        @include media ('>=tablet') {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 1px;
+
+        @include media ('>=tablet') {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+    }
+
+    .text-holder {
+        margin-bottom: 1px;
+
+        @include media ('>=tablet') {
+            margin-bottom: 5px;
+        }
+    }
+
+    .text {
+        font-size: 8px;
+
+        @include media ('>=tablet') {
+            font-size: 12px;
+        }
+    }
+
+    .modal-img-holder {
+        width: 100%;
+        margin-bottom: 1px;
+
+        @include media ('>=tablet') {
+            margin-bottom: 5px;
+        }
+    }
+
+    .modal-img {
+        width: 100%;
+        max-width: 234px;
+    }
+
+    .close-wraper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .close-modal {
+        border-radius: 6px;
+        background-color: $white;
+        border: 1px solid $black;
+    }
+
+    .close-modal:hover {
+        border: 1px solid $gold;
+        color: $gold;
+    }
+
+    .video-modal {
+        @extend.close-modal;
+        margin-right: 5px;
+        background-color: $space-gray;
+        padding: 1px 6px;
+        font-size: 13px;
+        text-decoration: none;
+        color: $black;
+    }
+
+    .video-modal:hover {
+        border: 1px solid $white;
+        color: $white;
+    }
+}
