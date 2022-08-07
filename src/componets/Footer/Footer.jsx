@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="author-holder">
-                <p className="author">Create by Yaroslv Hrytsiak</p>
+                <p className="author">Create by Yaroslav Hrytsiak</p>
             </div>
     </footer>
     )

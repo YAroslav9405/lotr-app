@@ -48,6 +48,7 @@ const toggleTheme = () => {
 const [modalIsOpen, setIsOpen] = useState(false);
 const [query, setQuery] = useState("");
 
+const keys = ["name", "race", "hair"]
 
 const openModal = () => {
     setIsOpen(true);
@@ -60,7 +61,7 @@ const renderResults = () => {
     if (!query.length) {
         return null
     }
-    const filterCharacter = character.filter(character=>character.name.toLowerCase().includes(query.toLowerCase()));
+    const filterCharacter = character.filter((item) => keys.some((key) => item[key].toLowerCase().includes(query.toLowerCase())));
     if (filterCharacter.length > 0 ) {
         return (
             <div>
@@ -410,7 +411,7 @@ const renderResults = () => {
                                          <span className="close" onClick={closeModal}></span>
                                          <div className="modal-context">
                                             <div className="input-holder">
-                                            <label className="label" htmlFor="input-modal">input character name: </label>
+                                            <label className="label" htmlFor="input-modal">filter characters by name, race or hair color: </label>
                                             <input 
                                                 type="text"
                                                 id="input-modal"
@@ -419,6 +420,7 @@ const renderResults = () => {
                                                 />
                                             </div>
                                                 {renderResults()}
+                                                
                                          </div>
                                      </Modal>
                              </div>

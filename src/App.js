@@ -22,7 +22,7 @@ function App() {
     setTimeout(() => {
       spinner.style.display="none";
       setLoading(false);
-    }, 0);
+    }, 2000);
   }
   return (
       !loading && (
