@@ -148,13 +148,13 @@ const renderResults = () => {
                 <section className="characters">
                     <div className="container">
                         <div className="link-holder">
-                            <a href="#movies" className="link">
-                                Scroll to Movies<span></span>
+                            <a href="#characters" className="link">
+                                Scroll to Characters<span></span>
                             </a>
                         </div>
                     </div>
                 </section>
-                <section className="about-characters">
+                <section className="about-characters" id="characters">
                     <div className="section-container">
                         <div className="title-holder-main">
                             <h2 className="main-title">characters</h2>

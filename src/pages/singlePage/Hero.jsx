@@ -2,15 +2,27 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import Header from "../../componets/Header/Header";
 import Footer from "../../componets/Footer/Footer";
+import React from 'react';
+import Select from 'react-select';
+
+
+
 
 
 const Hero = () => {
     const { id } = useParams();
     const [character, setCharacter] = useState();
-    const [quote, setQuote] = useState();
+    const [quotes, setQuote] = useState();
     const [query, setQuery] = useState("");
+    const [select, setSelect] = useState();
+    
 
-
+    const options = [
+        { value: undefined, label: 'all' },
+        { value: '5cd95395de30eff6ebccde5c', label: 'The Fellowship of the Ring' },
+        { value: '5cd95395de30eff6ebccde5b', label: 'Two Towers' },
+        { value: '5cd95395de30eff6ebccde5d', label: 'The Return of the King' }
+      ]
     
     const request = async ()=> {
         const response = await fetch (`https://the-one-api.dev/v2/character/${id}`,  {headers:{Authorization: "Bearer IJK1dkd6deE7Z0m2uUB4"}} );
@@ -21,6 +33,7 @@ const Hero = () => {
         const response = await fetch (`https://the-one-api.dev/v2/character/${id}/quote`,  {headers:{Authorization: "Bearer IJK1dkd6deE7Z0m2uUB4"}} );
         const data = await response.json();
         setQuote(data.docs);
+        console.log(quotes);
     }
     useEffect(() => {
         quoteRequest();
@@ -28,7 +41,8 @@ const Hero = () => {
     }, [id]);
 
     const renderDialog = () => {
-        const filterDialog = quote.filter(quote=>quote.dialog.toLowerCase().includes(query.toLowerCase()));
+
+        const filterDialog = quotes.filter(quote=>!select ? true : quote.movie === select).filter(quote=>quote.dialog.toLowerCase().includes(query.toLowerCase()));
         if (filterDialog.length > 0 ) {
             return (
                 <div>
@@ -162,11 +176,27 @@ const Hero = () => {
                                     </div>
                                 </div>
                             )}
-                            {quote && (
+                            {quotes && (
                                 <div className="quote-holder">
                                     <div className="title-holder-main">
                                         <p className="main-title">quotes</p>
                                     </div>
+                                    <Select 
+                                        className="select-movie"
+                                        options={options} 
+                                        placeholder="Select movie" 
+                                        onChange={(item) => setSelect(item.value)}
+                                        theme={(theme) => ({
+                                            ...theme,
+                                            borderRadius: 6,
+                                            colors: {
+                                                ...theme.colors,
+                                                primary25: '#c0c5ce',
+                                                primary: 'black',
+                                                primary50: '#c0c5ce',
+                                            },
+                                            })}
+                                    />
                                     <div className="input-holder">
                                         <label className="label" htmlFor="input">search by word or phrase: </label>
                                         <input 
@@ -177,7 +207,9 @@ const Hero = () => {
                                         />
                                     </div>
                                     <div>
-                                        {renderDialog()}
+                                        <div>
+                                            {renderDialog()}
+                                        </div>
                                     </div>
                                 </div>
                             )}

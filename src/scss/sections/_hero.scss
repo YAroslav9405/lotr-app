@@ -87,6 +87,10 @@
             font-size: 16px;
         }
     } 
+
+    .select-movie {
+        margin-bottom: 20px;
+    }
 }
 
 .input-holder {
@@ -125,6 +129,6 @@
 }
 
 .search:focus{
-    border: 1px solid $gold;
+    border: 1px solid $black;
 }
 
