@@ -33,7 +33,6 @@ const Hero = () => {
         const response = await fetch (`https://the-one-api.dev/v2/character/${id}/quote`,  {headers:{Authorization: "Bearer IJK1dkd6deE7Z0m2uUB4"}} );
         const data = await response.json();
         setQuote(data.docs);
-        console.log(quotes);
     }
     useEffect(() => {
         quoteRequest();
