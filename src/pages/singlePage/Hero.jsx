@@ -40,7 +40,6 @@ const Hero = () => {
     }, [id]);
 
     const renderDialog = () => {
-
         const filterDialog = quotes.filter(quote=>!select ? true : quote.movie === select).filter(quote=>quote.dialog.toLowerCase().includes(query.toLowerCase()));
         if (filterDialog.length > 0 ) {
             return (

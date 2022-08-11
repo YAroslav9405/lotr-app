@@ -10,13 +10,13 @@
 
     &.active {
         .nav-holder {
+            position: fixed;
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
             background-color: rgba(0, 0, 0, 0.8);
-
         }
-
+        
         .nav-opener {
             span {
                 opacity: 0;
@@ -52,7 +52,7 @@
     visibility: hidden;
     position: absolute;
     padding: 20px;
-    top: -10%;
+    top: 0;
     left: 0;
     right: 0;
     height: 100vh;

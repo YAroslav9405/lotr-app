@@ -16,17 +16,7 @@ import Hero from './pages/singlePage/Hero';
 
 
 function App() {
-  const [loading,setLoading] = useState(true);
-  const spinner = document.getElementById('spinner');
-  if(spinner) {
-    setTimeout(() => {
-      spinner.style.display="none";
-      setLoading(false);
-    }, 2000);
-  }
   return (
-      !loading && (
-        <div>
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/movies" element={<Movies/>} />
@@ -38,8 +28,6 @@ function App() {
             <Route path="/return-king" element={<ReturnKing/>} />
             <Route path='/:id'  element={<Hero/>} />
         </Routes>
-      </div>
-      )
   );
 }
 
